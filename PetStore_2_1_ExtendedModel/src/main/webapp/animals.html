@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Welcome</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-2.1.4.min.js">
+	//src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'
+</script>
+</head>
+<body>
+	<script type="application/javascript">
+				
+	$.getJSON("api/animals", function (data){
+        var trHTML = '';
+        $.each(data, function (index, value) {        
+        	trHTML += '<tr><td>'+ value.name + '</td><td>' + value.color + '</td><td>' + value.feed +'</td></tr>';
+        });
+        $('#animals_table').append(trHTML);
+    });
+
+//	function updatePopupHide(){
+//        $("#updatePopup").hide();
+//    }
+	
+//    function updatePopupShow(id){
+//    	$("#updatePopup").show();
+//    	var name=$('#animals_table tr:eq('+id+') td:eq(1)').html();
+//    	var color=$('#animals_table tr:eq('+id+') td:eq(2)').html();
+//    	var feed=$('#animals_table tr:eq('+id+') td:eq(3)').html();
+    	// Fill inputs for updatePopup
+//    	$('#update_table input[name="name"]').val(name);
+//    	$('#update_table input[name="color"]').val(color);
+//    	$('#update_table input[name="feed"]').val(feed);
+//    	$('#update_form input[name="id"]').val(id);
+//    }
+    
+//    function doUpdate(){
+//    	$("#updatePopup").hide();
+//    	var id=$('#update_form input[name="id"]').val();
+//    	var name=$('#update_table input[name="name"]').val();
+//    	var color=$('#update_table input[name="color"]').val();
+//    	var feed=$('#update_table input[name="feed"]').val();
+//    	var animal = {
+//                id : id,
+//    			name : name,
+//                color : color,
+//                feed : feed
+//            };
+//    	var data = JSON.stringify(animal);
+//        console.log("send - " + data);
+//        $.ajax({
+//            type: "PUT",
+//            url: "api/animals",
+//            data: data,
+//            contentType: "application/json; charset=utf-8",
+//            dataType: "json",
+//            success: function(value){
+//                var trHTML = '<td>'+value.id +'</td><td>' + value.name + '</td><td>' + value.color + '</td><td>' + value.feed + '</td><td>'+'<button onclick="updatePopupShow('+value.id+')" id="'+value.id+
+//            	'" class="update">Update</button>' +'</td><td>'+'<button onclick="deletePopupShow('+value.id+')" id="'+value.id+'" class="delete">Delete</button>'+'</td>';
+//                $('#animals_table tr:eq('+id+')').html(trHTML);
+//            },
+//            error:function(erMes){
+//            	 $('#animals_table').append('<tr>'+erMes+'<tr>'); 
+//            }
+//        }); 
+//    }
+    
+//    function deletePopupHide(){
+//        $("#deletePopup").hide();
+//    }
+    
+//    function deletePopupShow(id){
+//        $("#deletePopup").show();
+//        $('.d-popup-content input[name="id"]').val(id);
+//   }
+    
+//    function doDelete(){
+//    	deletePopupHide();
+//    	var id=$('.d-popup-content input[name="id"]').val();
+//    		var deleteUrl="api/animals/"+id;
+//    		$.ajax({
+//                type: "DELETE",
+//                url: deleteUrl,
+//                data: null,
+//                contentType: "application/json; charset=utf-8",
+//                dataType: "json",
+//                success: $('#animals_table tr:eq('+id+')').html("")     
+//            }); 
+//    }
+    
+ // Исправить UPDATE, DELETE buttons не работают с вновь созданными animals 
+    $(document).ready(function () {	
+//    	updatePopupHide();
+//    	deletePopupHide();
+//   	 $("#animal_create").click(function(){	
+//           var name = $('#create_table input[name="name"]').val();
+//            var color = $('#create_table input[name="color"]').val();
+//            var feed = $('#create_table input[name="feed"]').val();
+//            var animal = {
+//                name : name,
+//                color : color,
+//                feed : feed
+//            };
+//            var data = JSON.stringify(animal);
+//            console.log("send - " + data);
+//            $.ajax({
+//                type: "POST",
+//                url: "api/animals",
+//                data: data,
+//                contentType: "application/json; charset=utf-8",
+//                dataType: "json",
+//                success: function(value){
+//                    var trHTML = '<tr><td>'+value.id +'</td><td>' + value.name + '</td><td>' + value.color + '</td><td>' + value.feed + '</td><td>'+'<button onclick="updatePopupShow('+value.id+')" id="'+value.id+
+//                	'" class="update">Update</button>' +'</td><td>'+'<button onclick="deletePopupShow('+value.id+')" id="'+value.id+'" class="delete">Delete</button>'+'</td></tr>';
+//                    $('#animals_table').append(trHTML);
+//                },
+//                error:function(erMes){
+//                	 $('#animals_table').append('<tr>'+erMes+'<tr>'); 
+//                }
+//            }); 
+//        });
+    });
+	
+	</script>
+	<h2>List of animals:</h2>
+	<br> Search by name:
+	<input type="text" name="search"/>
+	<button class="search_button" onclick="doSearch()">Search</button>
+	<br>
+	<br>
+	<br>
+	
+	<table id="animals_table" border='1'>
+		<tr>
+			<th>Name</th>
+			<th>Color</th>
+			<th>Feed</th>
+		</tr>
+	</table>
+	<br>
+</body>
+</html>

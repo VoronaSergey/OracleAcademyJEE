@@ -1,0 +1,12 @@
+INFO: HHH000227: Running hbm2ddl schema export
+Hibernate: alter table user_address drop foreign key FKjja6c4wnw3h1n3fbuxjkxx1vf
+окт 11, 2015 11:35:06 PM org.hibernate.tool.hbm2ddl.SchemaExport perform
+ERROR: HHH000389: Unsuccessful: alter table user_address drop foreign key FKjja6c4wnw3h1n3fbuxjkxx1vf
+окт 11, 2015 11:35:06 PM org.hibernate.tool.hbm2ddl.SchemaExport perform
+ERROR: Error on rename of '.\hibernatedb\user_address' to '.\hibernatedb\#sql2-6b0-58' (errno: 152)
+Hibernate: drop table if exists hibernate_sequence
+Hibernate: drop table if exists human
+
+помогает перезапуск eclipse
+
+######################################################################

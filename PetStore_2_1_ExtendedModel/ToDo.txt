@@ -1,0 +1,53 @@
+1. sqlCreate file
+2. Переход на Derby
+3. Запустить работающий пример
+4. Dao сделать
+5. Service сделать
+
+
+08-14.10:
+1.++ Запустить работающий DAO
+2.++ Если 1 нет - попробовать Derby
+3. animals.html закончить
+4. JavaEE 4 главы
+5. Hibernate video course - полностью
+6. Сделать Repository
+7. Настроить Hibernate
+8. Запросы к Hibernate
+9. Наследование в Hibernate
+10. Добавлять сущности
+11. Новая схема БД
+12. Новые wiew
+13. git лучше исследовать
+Все вопросы записать и задать
+
+
+13/10
+1. admin.html
+2. client.html - animal
+3. index.html
+4. hibernate - как прикрутить?
+5. JEE - главу закончить
+6. Видео - 2 parts
+7. Набросать конфигу hibernate
+8. Работа с bibernate
+
+14/10
+1. sql script for creating DB
+2. прикрутить hibernate
+3. работа через hibernate
+4. Видео - 5 parts
+5. Исправить баги в admin.html
+6. Продумать схему БД
+7. Работа через репозиторий
+8. HQL
+9. Spring test
+
+16-19/10
+1. 3 сущности, 3 WS
+2. admin.html
+3. view полностью сделать
+4. Spring test
+
+19/11
+1. Repositories
