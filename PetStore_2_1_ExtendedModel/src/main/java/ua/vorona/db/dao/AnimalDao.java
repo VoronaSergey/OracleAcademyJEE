@@ -2,7 +2,7 @@ package ua.vorona.db.dao;
 
 import java.util.List;
 
-import ua.vorona.db.model.Animal;
+import ua.vorona.db.model.animal.Animal;
 
 /**
  * »нтерфейс манипул€ции данными в таблице animals.  лассическа€ схема - методы

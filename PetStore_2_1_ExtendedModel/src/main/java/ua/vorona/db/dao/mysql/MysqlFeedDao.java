@@ -3,7 +3,7 @@ package ua.vorona.db.dao.mysql;
 import java.util.List;
 
 import ua.vorona.db.dao.FeedDao;
-import ua.vorona.db.model.Feed;
+import ua.vorona.db.model.feed.Feed;
 
 public class MysqlFeedDao implements FeedDao {
 

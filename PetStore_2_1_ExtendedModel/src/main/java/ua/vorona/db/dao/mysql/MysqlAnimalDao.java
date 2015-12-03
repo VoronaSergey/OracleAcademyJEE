@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ua.vorona.db.dao.AnimalDao;
-import ua.vorona.db.model.Animal;
+import ua.vorona.db.model.animal.Animal;
 
 public class MysqlAnimalDao implements AnimalDao {
 

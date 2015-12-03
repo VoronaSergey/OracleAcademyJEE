@@ -18,13 +18,19 @@ import ua.vorona.db.model.animal.Animal;
 @Path("/animals")
 public class AnimalService {
 
+	private static final String dataSource = "INMEMORY"; // HIBERNATE, DAO
 	private static final SessionFactory sessionFactory = new Configuration()
 			.configure().buildSessionFactory();
 
 	@GET
 	@Produces("application/json")
 	public Response getAll() throws Exception {
-		// вынести вверх
+		if (dataSource.equals("HIBERNATE")) {
+
+		} else if (dataSource.equals("DAO")) {
+		} else {
+
+		}
 		DaoFactory.setDaoFactoryFCN("ua.vorona.db.dao.mysql.MysqlDaoFactory");
 		DaoFactory daoFactory = DaoFactory.getInstance();
 		AnimalDao animalDao = daoFactory.getAnimalDao();
@@ -76,7 +82,7 @@ public class AnimalService {
 		// if (result) {
 		// return Response.ok(animal, MediaType.APPLICATION_JSON_TYPE).build();
 		// } else {
-		//		return null;
+		// return null;
 		// }
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();

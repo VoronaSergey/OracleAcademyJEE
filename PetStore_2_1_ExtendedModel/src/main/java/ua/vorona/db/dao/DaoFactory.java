@@ -59,6 +59,6 @@ public abstract class DaoFactory {
 
 	public abstract FeedDao getFeedDao();
 
-	public abstract ToolDao getToolDao();
+	public abstract AccessoryDao getAccessoryDao();
 
 }
