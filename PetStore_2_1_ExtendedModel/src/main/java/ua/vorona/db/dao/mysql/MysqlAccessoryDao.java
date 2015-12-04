@@ -5,7 +5,7 @@ import ua.vorona.db.model.accessory.Accessory;
 
 public class MysqlAccessoryDao implements AccessoryDao{
 
-	public void create(Accessory tool) {
+	public void create(Accessory accessory) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -15,12 +15,12 @@ public class MysqlAccessoryDao implements AccessoryDao{
 		return null;
 	}
 
-	public boolean update(Accessory tool) {
+	public boolean update(Accessory accessory) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public boolean delete(Accessory tool) {
+	public boolean delete(Accessory accessory) {
 		// TODO Auto-generated method stub
 		return false;
 	}

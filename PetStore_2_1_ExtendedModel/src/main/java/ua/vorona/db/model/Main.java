@@ -4,15 +4,15 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import ua.vorona995.accessory.Accessory;
-import ua.vorona995.accessory.AccessoryType;
-import ua.vorona995.animal.Animal;
-import ua.vorona995.animal.AnimalType;
-import ua.vorona995.animal.bird.Bird;
-import ua.vorona995.animal.bird.BirdSpecies;
-import ua.vorona995.animal.bird.BirdType;
-import ua.vorona995.feed.Feed;
-import ua.vorona995.feed.FeedType;
+import ua.vorona.db.model.accessory.Accessory;
+import ua.vorona.db.model.accessory.AccessoryType;
+import ua.vorona.db.model.animal.Animal;
+import ua.vorona.db.model.animal.AnimalType;
+import ua.vorona.db.model.animal.bird.Bird;
+import ua.vorona.db.model.animal.bird.BirdSpecies;
+import ua.vorona.db.model.animal.bird.BirdType;
+import ua.vorona.db.model.feed.Feed;
+import ua.vorona.db.model.feed.FeedType;
 
 public class Main {
 

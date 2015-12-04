@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 
 import ua.vorona.db.model.accessory.Accessory;
 import ua.vorona.db.repository.BaseRepository;
-import ua.vorona.db.repository.BaseSqlSpecification;
+import ua.vorona.db.repository.BaseSpecification;
 
 public class AccessoryRepository implements BaseRepository<Accessory> {
 
@@ -29,8 +29,9 @@ public class AccessoryRepository implements BaseRepository<Accessory> {
 		// TODO Auto-generated method stub
 	}
 
-	public List<Accessory> query(BaseSqlSpecification specification) {
+	public List<Accessory> query(BaseSpecification specification) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 }
+	

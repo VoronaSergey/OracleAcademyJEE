@@ -4,11 +4,11 @@ import ua.vorona.db.model.accessory.Accessory;
 
 public interface AccessoryDao {
 
-	void create(Accessory tool);
+	void create(Accessory accessory);
 
 	Accessory read(long id);
 
-	boolean update(Accessory tool);
+	boolean update(Accessory accessory);
 
-	boolean delete(Accessory tool);
+	boolean delete(Accessory accessory);
 }

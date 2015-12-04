@@ -86,8 +86,8 @@ public class MysqlAnimalDao implements AnimalDao {
 					Statement.RETURN_GENERATED_KEYS);
 			int k = 1;
 			pstmt.setString(k++, animal.getName());
-			pstmt.setString(k++, animal.getColor());
-			pstmt.setString(k++, animal.getFeed());
+//			pstmt.setString(k++, animal.getColor());
+//			pstmt.setString(k++, animal.getFeed());
 			int count = pstmt.executeUpdate();
 			if (count > 0) {
 				ResultSet rs = pstmt.getGeneratedKeys();
@@ -114,8 +114,8 @@ public class MysqlAnimalDao implements AnimalDao {
 			PreparedStatement pstmt = con.prepareStatement(SQL_UPDATE_ANIMAL);
 			int k = 1;
 			pstmt.setString(k++, animal.getName());
-			pstmt.setString(k++, animal.getColor());
-			pstmt.setString(k++, animal.getFeed());
+//			pstmt.setString(k++, animal.getColor());
+//			pstmt.setString(k++, animal.getFeed());
 			pstmt.setLong(k++, animal.getId());
 			int count = pstmt.executeUpdate();
 			if (count > 0) {
@@ -181,12 +181,12 @@ public class MysqlAnimalDao implements AnimalDao {
 	}
 
 	private Animal extractAnimal(ResultSet rs) throws SQLException {
-		Animal user = new Animal();
-		user.setId(rs.getLong("id"));
-		user.setName(rs.getString("name"));
-		user.setColor(rs.getString("color"));
-		user.setFeed(rs.getString("feed"));
-		return user;
+		Animal animal = new Animal();
+		animal.setId(rs.getInt("id"));
+		animal.setName(rs.getString("name"));
+//		user.setColor(rs.getString("color"));
+//		user.setFeed(rs.getString("feed"));
+		return animal;
 	}
 
 	// public static void main(String[] args) throws SQLException {

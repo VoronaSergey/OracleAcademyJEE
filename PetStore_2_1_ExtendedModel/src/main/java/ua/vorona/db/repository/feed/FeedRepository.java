@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 
 import ua.vorona.db.model.feed.Feed;
 import ua.vorona.db.repository.BaseRepository;
-import ua.vorona.db.repository.BaseSqlSpecification;
+import ua.vorona.db.repository.BaseSpecification;
 
 public class FeedRepository implements BaseRepository<Feed> {
 
@@ -28,7 +28,8 @@ public class FeedRepository implements BaseRepository<Feed> {
 		// TODO Auto-generated method stub
 	}
 
-	public List<Feed> query(BaseSqlSpecification specification) {
+	@Override
+	public List<Feed> query(BaseSpecification specification) {
 		// TODO Auto-generated method stub
 		return null;
 	}
